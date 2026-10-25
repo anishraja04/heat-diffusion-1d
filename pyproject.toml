@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heat-diffusion-1d"
+version = "0.1.0"
+description = "Explicit, implicit and Crank-Nicolson solvers for the 1-D heat equation, validated against analytical solutions."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Md Anish Ahamad", email = "mdanisahamad2003@gmail.com" }]
+keywords = ["heat-equation", "finite-difference", "crank-nicolson", "numerical-methods", "cfd"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Intended Audience :: Science/Research",
+]
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+heat-study = "heat.study:main"
+
+[tool.setuptools.packages.find]
+include = ["heat*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
