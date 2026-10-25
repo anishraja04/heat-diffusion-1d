@@ -90,8 +90,8 @@ scheme stays bounded well past its limit and looks stable when it is not.
 Every row with `|g| > 1` is unstable, `r = 0.51` included. It stays invisible
 until `|g|^steps` outgrows the `1e-10` seed, which needs about `1e10`, and
 `r = 0.51` reaches only `1e1` over this run. **Instability is a property of `r`,
-not of whether a short run happens to reveal it** — which is exactly how it
-reaches production and fails later on a finer mesh.
+not of whether a short run happens to reveal it.** That is how it reaches
+production and fails later on a finer mesh.
 
 ### What this costs in practice
 
